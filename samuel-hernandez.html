@@ -28,6 +28,7 @@
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center center;
+            
         }
 
         #namePlate {
@@ -53,17 +54,7 @@
             align-items: center;
         }
 
-        button {
-            margin-top: 20px;
-            padding: 10px 20px;
-            font-size: 16px;
-            background-color: cornflowerblue;
-            color: white;
-            border: none;
-            cursor: pointer;
-            position: absolute;
-            transition: transform 0.3s ease;
-        }
+
     </style>
 </head>
 <body>
@@ -96,27 +87,6 @@
                 <img src="images/Sam3.jpeg" style="max-width: 250px; max-height: 250px;">
             </div>
         </div>
-        
-        <button id="runAwayButton" onclick="redirect()">Run Away</button>
-
-        <script>
-            const button = document.getElementById('runAwayButton');
-
-            document.addEventListener('mousemove', (e) => {
-                moveButtonAway(e);
-            });
-
-            function moveButtonAway(e) {
-                const newX = Math.random() * (window.innerWidth - 100); // Adjusted to consider button width
-                const newY = Math.random() * (window.innerHeight - 40); // Adjusted to consider button height
-
-                button.style.transform = `translate(${newX}px, ${newY}px)`;
-            }
-
-            function redirect() {
-                window.location.href = 'index.html';
-            }
-        </script>
     </main>
 </body>
 </html>
