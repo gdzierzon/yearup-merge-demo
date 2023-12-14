@@ -11,8 +11,18 @@
     <link rel="stylesheet" href="css/cesar-miranda.css" />
   </head>
   <body>
+    <nav class="navbar navbar-expand-lg" >
         <div class="container">
-            <h1 class="title">Cesar Miranda</h1>
+            <a class="navbar-brand" href="index.html">Home</a>
+        </div>
+    </nav>
+    <div class="container mt-4 mb-4" id="container">
+            <h1 class="title" onclick="changeColor()">Cesar Miranda
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" style="vertical-align: middle; margin-left: 4px;">
+                    <path d="M6 0l6 12H0z" fill="#999" />
+                  </svg>
+                  <span style="margin-left: 4px; font-size: 12px;">Click here</span>
+                </h1>
 
             <h3 class="subtitle">About Me</h3>
             
@@ -30,6 +40,23 @@
             </ul>
 
             <img class="profile-image" src="https://condaluna.com/assets/stickers/thank-you-pling.gif" alt="Thank You">
-        </div>
+
+            <script>
+                function changeColor() {
+                  var title = document.querySelector('.title');
+                  var randomColor = getRandomColor();
+                  title.style.color = randomColor;
+                }
+              
+                function getRandomColor() {
+                  var letters = '0123456789ABCDEF';
+                  var color = '#';
+                  for (var i = 0; i < 6; i++) {
+                    color += letters[Math.floor(Math.random() * 16)];
+                  }
+                  return color;
+                }
+            </script>
+     </div>
     </body>
     </html>
