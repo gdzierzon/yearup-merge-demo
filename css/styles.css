@@ -1,5 +1,5 @@
 .images {
-    height: 500px;
+    height: 400px;
 }
 
 h1 {
@@ -11,6 +11,6 @@ h1 {
  } */
 
  .border {
-    border: 70px solid #e7a1ab !important;
+    border: 50px solid #e7a1ab !important;
     border-radius: 10px;
 }
