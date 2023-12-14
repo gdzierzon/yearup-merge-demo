@@ -56,6 +56,15 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
     transition: box-shadow 0.3s ease; 
 }
+button {
+        margin-top: 20px;
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: cornflowerblue;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
     </style>
   </head>
   <body>
@@ -148,7 +157,7 @@
           <div>
             <span
               >I'm an avid shoe collector, I've recently stopped buying myself
-              but I do appreciate other peoples kicks.</span
+              but I do appreciate other peoples' kicks.</span
             >
           </div>
           <img
@@ -157,6 +166,28 @@
           />
         </div>
       </div>
+      <button onclick="runAwayAndRedirect()">Back to Home Page</button>
+      <script>
+        function runAwayAndRedirect() {
+          const button = document.querySelector('button');
+
+          // Move the button away three times
+          for (let i = 0; i < 3; i++) {
+            setTimeout(() => {
+              const newX = Math.random() * window.innerWidth;
+              const newY = Math.random() * window.innerHeight;
+
+              button.style.transform = `translate(${newX}px, ${newY}px)`;
+            }, i * 1000); // Move every 1000ms (1 second)
+          }
+
+          // Redirect to index.html after the animation
+          setTimeout(() => {
+            window.location.href = 'index.html';
+          }, 3000); // Redirect after 3 seconds
+        }
+      </script>
     </main>
+
   </body>
 </html>
